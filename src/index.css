@@ -1,0 +1,20 @@
+.users-list:nth-child(even) {
+    background-image: linear-gradient(to right, #cfd9df 0%, #e2ebf0 100%);
+  padding: 9px;
+}
+
+.users-list:nth-child(odd) {
+    background-image: linear-gradient(to left, #cfd9df 0%, #e2ebf0 100%);
+
+  padding: 9px;
+}
+
+.users-link {
+  text-decoration: none !important;
+  color: rgb(7, 7, 7);
+  font-weight: bold;
+}
+
+.users-link .text-muted {
+  font-weight: 200;
+}
