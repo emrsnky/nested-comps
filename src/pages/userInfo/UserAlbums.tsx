@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ListGroup } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 interface AlbumParams {
   userId: number;
@@ -17,7 +17,9 @@ const fetchUserAlbums = async (userId: string) => {
     throw new Error("Network response was not ok");
   }
   const albums: AlbumParams[] = await response.json();
+  console.log(albums)
   return albums;
+  
 };
 
 const UserAlbums = () => {
@@ -28,19 +30,19 @@ const UserAlbums = () => {
     const getUserAlbums = async () => {
       if (!userId) return;
       const albumsData = await fetchUserAlbums(userId);
+      console.log(albumsData)
       setUserAlbums(albumsData);
     };
 
     getUserAlbums();
   }, [userId]);
-
   return (
     <>
       <ListGroup>
         {userAlbums?.map((album) => (
           <ListGroup.Item key={album.id}>
-            <h3>{album.title}</h3>
-            <p>{album.body}</p>
+           <Link className="albums-link" to={`/users/${userId}/albums/${album.id}`}><h3>{album.title}</h3></Link> 
+           <span className="text-muted d-block">Click to see details</span>
           </ListGroup.Item>
         ))}
       </ListGroup>

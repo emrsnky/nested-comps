@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ListGroup } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 interface PostParams {
   userId: number;
@@ -39,8 +39,13 @@ const UserPosts = () => {
       <ListGroup>
         {userPosts?.map((post) => (
           <ListGroup.Item key={post.id}>
-            <h3>{post.title}</h3>
-            <p>{post.body}</p>
+            <Link
+              className="posts-link"
+              to={`/users/${userId}/posts/${post.id}`}
+            >
+              <h3>{post.title}</h3>
+              <span className="text-muted d-block">Click to see details</span>
+            </Link>
           </ListGroup.Item>
         ))}
       </ListGroup>

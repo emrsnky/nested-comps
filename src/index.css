@@ -18,3 +18,19 @@
 .users-link .text-muted {
   font-weight: 200;
 }
+ .albums-link {
+  text-decoration: none !important;
+  color: rgb(7, 7, 7);
+  font-weight: bold;
+}
+
+.tabs-link {
+  color: rgb(7, 7, 7) !important;
+  font-weight: bold !important;
+}
+
+.posts-link{
+  text-decoration: none !important;
+  color: rgb(7, 7, 7);
+  font-weight: bold;
+}
