@@ -1,30 +1,14 @@
-# React + TypeScript + Vite
+I’m excited to share my latest project with you! 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project, I used the following technologies:
 
-Currently, two official plugins are available:
+• React-Bootstrap for responsive UI components
+• Zustand for state management
+• React-Router-Dom for routing
+• React-Icons for beautiful icons
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Key Features:
+• User Section with Tabs: Loads content only when clicked for better performance.
+• User Posts and Comments: Easily view user posts and their comments.
+• User Albums: Browse user albums and view details for each album.
+• Favorites Management: Add or remove albums from your favorites directly from the album details page. You can also manage your favorite albums from the favorites page.
