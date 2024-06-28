@@ -1,10 +1,10 @@
 .users-list:nth-child(even) {
-    background-image: linear-gradient(to right, #cfd9df 0%, #e2ebf0 100%);
+  background-image: linear-gradient(to right, #cfd9df 0%, #e2ebf0 100%);
   padding: 9px;
 }
 
 .users-list:nth-child(odd) {
-    background-image: linear-gradient(to left, #cfd9df 0%, #e2ebf0 100%);
+  background-image: linear-gradient(to left, #cfd9df 0%, #e2ebf0 100%);
 
   padding: 9px;
 }
@@ -18,7 +18,7 @@
 .users-link .text-muted {
   font-weight: 200;
 }
- .albums-link {
+.albums-link {
   text-decoration: none !important;
   color: rgb(7, 7, 7);
   font-weight: bold;
@@ -29,8 +29,28 @@
   font-weight: bold !important;
 }
 
-.posts-link{
+.posts-link {
   text-decoration: none !important;
   color: rgb(7, 7, 7);
   font-weight: bold;
+}
+
+.favorites-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.monster {
+  position: relative;
+  bottom: 5px;
+}
+
+.toastNotification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.home-page{
+  overflow: hidden;
 }

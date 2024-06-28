@@ -17,9 +17,8 @@ const fetchUserAlbums = async (userId: string) => {
     throw new Error("Network response was not ok");
   }
   const albums: AlbumParams[] = await response.json();
-  console.log(albums)
+  console.log(albums);
   return albums;
-  
 };
 
 const UserAlbums = () => {
@@ -30,7 +29,7 @@ const UserAlbums = () => {
     const getUserAlbums = async () => {
       if (!userId) return;
       const albumsData = await fetchUserAlbums(userId);
-      console.log(albumsData)
+      console.log(albumsData);
       setUserAlbums(albumsData);
     };
 
@@ -41,8 +40,13 @@ const UserAlbums = () => {
       <ListGroup>
         {userAlbums?.map((album) => (
           <ListGroup.Item key={album.id}>
-           <Link className="albums-link" to={`/users/${userId}/albums/${album.id}`}><h3>{album.title}</h3></Link> 
-           <span className="text-muted d-block">Click to see details</span>
+            <Link
+              className="albums-link"
+              to={`/users/${userId}/albums/${album.id}`}
+            >
+              <h3>{album.title}</h3>
+              <span className="text-muted d-block">Click to see details</span>
+            </Link>
           </ListGroup.Item>
         ))}
       </ListGroup>

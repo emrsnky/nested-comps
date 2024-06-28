@@ -41,7 +41,15 @@ const UserAlbums = () => {
         {userAlbums?.map((album) => (
           <ListGroup.Item key={album.id}>
             <h3>{album.title}</h3>
-            {album.completed ? <p>Completed: <BiCheck className="text-success fs-1" /></p> : <p>Incomplete: <BiX className="text-danger fs-1" /> </p>}
+            {album.completed ? (
+              <p>
+                Completed: <BiCheck className="text-success fs-1" />
+              </p>
+            ) : (
+              <p>
+                Incomplete: <BiX className="text-danger fs-1" />{" "}
+              </p>
+            )}
           </ListGroup.Item>
         ))}
       </ListGroup>

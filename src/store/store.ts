@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
@@ -14,9 +15,9 @@ export const useStore = create(
     (set) => ({
       favorites: [],
       addFavorite: (photo: Photo) =>
-        set((state) => ({ favorites: [...state.favorites, photo] })),
-      removeFavorite: (id) =>
-        set((state) => ({
+        set((state: any) => ({ favorites: [...state.favorites, photo] })),
+      removeFavorite: (id: number) =>
+        set((state: any) => ({
           favorites: state.favorites.filter((photo: Photo) => photo.id !== id),
         })),
     }),

@@ -1,14 +1,14 @@
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
-import { UserAlbums, UserPosts, UserTodos } from '../pages/userInfo';
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+import { UserAlbums, UserPosts, UserTodos } from "../pages/userInfo";
 
 interface UserTabProps {
-    postLink: string;
-    albumLink: string;
-    todoLink: string;
+  postLink: string;
+  albumLink: string;
+  todoLink: string;
 }
 
-function UserTab({postLink, albumLink, todoLink, }:UserTabProps) {
+function UserTab({ postLink, albumLink, todoLink }: UserTabProps) {
   return (
     <Tabs
       defaultActiveKey={postLink}

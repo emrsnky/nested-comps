@@ -1,5 +1,5 @@
-import { Toast, ToastContainer } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Toast, ToastContainer } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 interface ToastNotificationProps {
   message: string;
@@ -8,13 +8,18 @@ interface ToastNotificationProps {
   onClose: () => void;
 }
 
-const ToastNotification: React.FC<ToastNotificationProps> = ({ message,  delay = 3000, show, onClose }) => {
+const ToastNotification: React.FC<ToastNotificationProps> = ({
+  message,
+  delay = 3000,
+  show,
+  onClose,
+}) => {
   return (
-    <ToastContainer position="bottom-end" className="p-3">
+    <ToastContainer className="p-3 toastNotification">
       <Toast show={show} onClose={onClose} delay={delay} autohide>
-        <Toast.Header>
+        <Toast.Header className="text-muted fw-bold mx-5">
+          {message}
         </Toast.Header>
-        <Toast.Body>{message}</Toast.Body>
       </Toast>
     </ToastContainer>
   );

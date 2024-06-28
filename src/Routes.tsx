@@ -39,7 +39,7 @@ const routes = [
       {
         path: "favorites",
         element: <FavoritesPage />,
-      }
+      },
     ],
   },
 ];
